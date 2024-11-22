@@ -6,17 +6,13 @@ import { IoCloseCircle } from "react-icons/io5";
 
 const TodoEditor = ({addTodo}) => {
   const [task, setTask] = useState("")
-  // inputRef 변수가 useRef()를 통해 생성된 객체를 참조하도록 설정
   const inputRef = useRef()
 
   const onChangeTask = (e) => {setTask(e.target.value)}
   const onSubmit = () => {
-    // 빈 입력 방지
     if (!task) return
 
-    // 할 일 추가
     addTodo(task); 
-    // 입력창 초기화 및 포커스
     setTask("");
     inputRef.current.focus();
   }
