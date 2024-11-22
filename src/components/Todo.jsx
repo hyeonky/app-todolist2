@@ -20,7 +20,6 @@ const Todo = () => {
     setTodos([newTodo, ...todos])
   }
 
-  // 완료 표시 함수
   const onUpdate = (id) => {
     setTodos(
       todos.map((todo) => {
@@ -29,7 +28,6 @@ const Todo = () => {
     )
   }
 
-  // 할 일 삭제 함수
   const onDelete = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id))
   }
