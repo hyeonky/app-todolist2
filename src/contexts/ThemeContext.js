@@ -1,10 +1,6 @@
 'use client'
 
 import { createContext, useContext } from 'react'
-import './globals.css'
-import { TodoProvider } from '@/contexts/TodoContext'
-import { ThemeProvider } from '@/contexts/ThemeContext'
-import { Providers } from '@/contexts'
 
 const themes = {
   light: {
@@ -22,14 +18,15 @@ const themes = {
   },
 }
 
+// 생성
 export const ThemeContext = createContext(themes.light)
 
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body>
-        <Providers>{children}</Providers>
-      </body>
-    </html>
-  )
+// 공급
+export const ThemeProvider = ({ children }) => {
+  return <ThemeContext.Provider value={themes.light}>{children}</ThemeContext.Provider>
+}
+
+// 사용
+export const useTheme = () => {
+  return useContext(ThemeContext)
 }
