@@ -3,14 +3,14 @@
 import classNames from 'classnames'
 import React, { useContext, useRef, useState } from 'react'
 import { IoCloseCircle } from 'react-icons/io5'
-import { ThemeContext } from '@/app/layout'
 import { useTodo } from '@/contexts/TodoContext'
+import { useTheme } from '@/contexts/ThemeContext'
 
 const TodoEditor = () => {
   const [task, setTask] = useState('')
   const inputRef = useRef()
-  const theme = useContext()
   const { addTodo } = useTodo()
+  const theme = useTheme()
 
   const onChangeTask = (e) => {
     setTask(e.target.value)

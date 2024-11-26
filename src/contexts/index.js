@@ -1,10 +1,10 @@
 import { ThemeProvider } from './ThemeContext'
 import { TodoProvider } from './TodoContext'
 
-export const Providers = () => {
+export const Providers = ({ children }) => {
   return (
     <ThemeProvider>
-      <TodoProvider></TodoProvider>
+      <TodoProvider>{children}</TodoProvider>
     </ThemeProvider>
   )
 }

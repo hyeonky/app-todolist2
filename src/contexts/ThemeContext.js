@@ -19,7 +19,7 @@ const themes = {
 }
 
 // 생성
-export const ThemeContext = createContext(themes.light)
+const ThemeContext = createContext(themes.light)
 
 // 공급
 export const ThemeProvider = ({ children }) => {

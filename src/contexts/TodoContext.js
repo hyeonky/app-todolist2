@@ -1,6 +1,6 @@
 'use client'
 
-import { ADD_TODO, DELETE_TODO, setTodos, UPDATE_TODO } from '../states/todoReducer'
+import { ADD_TODO, DELETE_TODO, setTodos, UPDATE_TODO } from '@/states/todoReducer'
 import { createContext, useContext, useEffect, useReducer } from 'react'
 
 // 생성
